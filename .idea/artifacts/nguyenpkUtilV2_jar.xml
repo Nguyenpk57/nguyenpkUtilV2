@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="nguyenpkUtilV2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/nguyenpkUtilV2_jar</output-path>
+    <root id="archive" name="nguyenpkUtilV2.jar">
+      <element id="module-output" name="nguyenpkUtilV2" />
+    </root>
+  </artifact>
+</component>
