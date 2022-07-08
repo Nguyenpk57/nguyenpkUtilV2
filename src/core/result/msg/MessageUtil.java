@@ -38,12 +38,6 @@ public class MessageUtil {
         localeSeparator = "_";
     }
 
-    private String getLanguageFile(String language) {
-        return new StringBuilder().append(propertiesConfigUtil.getValue("language.file.path"))
-                .append(localeSeparator)
-                .append(stringUtil.trim(language)).toString();
-    }
-
     //<editor-fold defaultstate="collapsed" desc="getMessage">
     public String getMessage(String language, String key) {
         try {
@@ -62,6 +56,12 @@ public class MessageUtil {
             logger.error(ex.getMessage());
             return key;
         }
+    }
+
+    private String getLanguageFile(String language) {
+        return new StringBuilder().append(propertiesConfigUtil.getValue("language.file.path"))
+                .append(localeSeparator)
+                .append(stringUtil.trim(language)).toString();
     }
 
     private Object[] buildArgs(String language, Object... args) {
@@ -89,4 +89,32 @@ public class MessageUtil {
         return result;
     }
     //</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="getMessage by path">
+    public String getMessageByPath(String path, String language, String key) {
+        try {
+            String languageFilePath = getLanguageFileByPath(path, language);
+            return resourceConfigUtil.getValue(languageFilePath, key);
+        } catch (Throwable ex) {
+            logger.error(ex.getMessage());
+            return key;
+        }
+    }
+
+    public String getMessageByPath(String path, String language, String key, Object... args) {
+        try {
+            return messageFormatFormatter.get(getMessage(language, key)).format(buildArgs(language, args));
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            return key;
+        }
+    }
+
+    private String getLanguageFileByPath(String path, String language) {
+        return new StringBuilder().append(path)
+                .append(localeSeparator)
+                .append(stringUtil.trim(language)).toString();
+    }
+    //</editor-fold>
+
 }
