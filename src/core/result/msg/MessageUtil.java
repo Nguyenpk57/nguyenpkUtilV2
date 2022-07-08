@@ -15,11 +15,11 @@ public class MessageUtil {
     private static MessageUtil instance;
     private static HashMap<String, MessageUtil> instances;
     private String localeSeparator;
-    protected final LoadConfigUtil propertiesConfigUtil = ModuleFactory.getFactory().propertiesfigUtil();
-    protected final LoadConfigUtil resourceConfigUtil = ModuleFactory.getFactory().resourcefigUtil();
-    protected final Formatter<MessageFormat> messageFormatFormatter = ModuleFactory.getFactory().messageFormatter();
-    protected final StringUtil stringUtil = ModuleFactory.getFactory().stringUtil();
-    protected final Logger logger = ModuleFactory.getFactory().loggerFactory().getLogger(this.getClass());
+    private final LoadConfigUtil propertiesConfigUtil = ModuleFactory.getFactory().propertiesfigUtil();
+    private final LoadConfigUtil resourceConfigUtil = ModuleFactory.getFactory().resourcefigUtil();
+    private final Formatter<MessageFormat> messageFormatFormatter = ModuleFactory.getFactory().messageFormatter();
+    private final StringUtil stringUtil = ModuleFactory.getFactory().stringUtil();
+    private final Logger logger = ModuleFactory.getFactory().loggerFactory().getLogger(this.getClass());
 
     private MessageUtil() {
         initialization();

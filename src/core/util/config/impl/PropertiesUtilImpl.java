@@ -14,7 +14,7 @@ public class PropertiesUtilImpl implements LoadConfigUtil {
 
     @Override
     public String getValue(String key) {
-        return getValue(CONFIG_DEFAULT.DEFAULT_PROPERTIES);
+        return getValue(CONFIG_DEFAULT.DEFAULT_PROPERTIES, key);
     }
 
     @Override

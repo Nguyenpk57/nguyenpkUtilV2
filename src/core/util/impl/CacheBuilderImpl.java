@@ -14,9 +14,9 @@ public class CacheBuilderImpl implements CacheBuilder {
     private static volatile CacheBuilderImpl instance;
     private static final Object LOCK = new Object();
     private static final Integer DEFAULT_TTL = 7 * 24 * 60 * 60;//7 day
-    protected final StringUtil stringUtil = ModuleFactory.getFactory().stringUtil();
-    protected final DateTimeUtil dateTimeUtil = ModuleFactory.getFactory().dateTimeUtil();
-    protected final NumberUtil<Integer> integerUtil = ModuleFactory.getFactory().integerUtil();
+    private final StringUtil stringUtil = ModuleFactory.getFactory().stringUtil();
+    private final DateTimeUtil dateTimeUtil = ModuleFactory.getFactory().dateTimeUtil();
+    private final NumberUtil<Integer> integerUtil = ModuleFactory.getFactory().integerUtil();
 
     protected Logger logger;
     protected final MapBuilder caches = ModuleFactory.getFactory().mapBuilder();

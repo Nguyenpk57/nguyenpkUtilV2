@@ -57,7 +57,7 @@ public class Result {
     }
 
     //</editor-fold>
-    //<editor-fold defaultstate="collapsed" desc="getMessage">
+    //<editor-fold defaultstate="collapsed" desc="getMessage in language file">
     public Result(Result obj) {
         addStack(obj);
         addStack(new Stack());

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class FileConfigUtilImpl implements LoadConfigUtil    {
 
-    protected final Logger logger = ModuleFactory.getFactory().loggerFactory().getLogger(this.getClass());
+    private final Logger logger = ModuleFactory.getFactory().loggerFactory().getLogger(this.getClass());
 
     @Override
     public String getValue(String key) {

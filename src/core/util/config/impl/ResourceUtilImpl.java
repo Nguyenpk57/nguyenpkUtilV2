@@ -11,7 +11,7 @@ public class ResourceUtilImpl implements LoadConfigUtil {
 
     @Override
     public String getValue(String key) {
-        return getValue(CONFIG_DEFAULT.DEFAULT_BUNDLE);
+        return getValue(CONFIG_DEFAULT.DEFAULT_BUNDLE, key);
     }
 
     @Override
