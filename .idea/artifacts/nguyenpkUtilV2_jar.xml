@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/nguyenpkUtilV2_jar</output-path>
     <root id="archive" name="nguyenpkUtilV2.jar">
       <element id="module-output" name="nguyenpkUtilV2" />
+      <element id="library" level="project" name="lib" />
     </root>
   </artifact>
 </component>
