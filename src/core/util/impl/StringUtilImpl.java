@@ -3,15 +3,17 @@ package core.util.impl;
 import core.module.ModuleFactory;
 import core.util.CollectionUtil;
 import core.util.StringUtil;
+import core.util.format.Formatter;
 import org.apache.commons.lang3.RandomStringUtils;
 
+import java.text.MessageFormat;
 import java.util.List;
 import java.util.Random;
 
 public class StringUtilImpl implements StringUtil {
 
     private final CollectionUtil collectionUtil = ModuleFactory.getFactory().collectionUtil();
-
+    private final Formatter<MessageFormat> messageFormatter = ModuleFactory.getFactory().messageFormatter();
     @Override
     public <V> String parse(V v) {
         if (v == null) {
@@ -81,8 +83,7 @@ public class StringUtilImpl implements StringUtil {
 
     @Override
     public <O> String format(String pattern, O... a) {
-        //TODO Formatter<MessageFormat>
-        return null;
+        return messageFormatter.get(pattern).format(a);
     }
 
     @Override
