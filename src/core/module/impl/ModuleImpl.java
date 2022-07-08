@@ -141,7 +141,7 @@ public class ModuleImpl implements Module {
 
     @Override
     public CacheBuilder cacheBuilder() {
-        return new CacheBuilderImpl();
+        return new CacheBuilderImpl().instance();
     }
 
 
