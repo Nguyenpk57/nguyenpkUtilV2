@@ -61,4 +61,6 @@ public interface Module {
 
     <K, V> MapBuilder<K, V>  mapBuilder();
 
+    CacheBuilder cacheBuilder();
+
 }

@@ -21,9 +21,6 @@ public class CacheBuilderImpl implements CacheBuilder {
     protected Logger logger;
     protected final MapBuilder caches = ModuleFactory.getFactory().mapBuilder();
 
-    private CacheBuilderImpl() {
-    }
-
     public static final CacheBuilder instance() {
         if (instance == null) {
             synchronized (LOCK) {

@@ -139,4 +139,10 @@ public class ModuleImpl implements Module {
         return new MapBuilderImpl<K, V>();
     }
 
+    @Override
+    public CacheBuilder cacheBuilder() {
+        return new CacheBuilderImpl();
+    }
+
+
 }

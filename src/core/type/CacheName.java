@@ -5,7 +5,7 @@ import core.util.StringUtil;
 
 public enum CacheName implements EnumType<String, CacheName>, Type<String> {
     INVALID(StringUtil.BLANK),
-    GET_SUPERCLASSES("GET_SUPERCLASSES");
+    CUST_LENGTH("CUST_LENGTH");
 
     private final StringUtil stringUtil = ModuleFactory.getFactory().stringUtil();
 
